@@ -17,18 +17,19 @@ public class App {
                 int radioId = Integer.parseInt(items[0]);// az első darab a rádió azonosítója
                 int min = Integer.parseInt(items[1]);// a második darab a perc
                 int sec = Integer.parseInt(items[2]);// a harmadik darab a másodperc
+                int second = min * 60 + sec;// csak másodperc
 
                 switch (radioId) {// a radioId-t egy switch-el vizsgáljuk (lehet if - else-vel is, de talán így
                                   // szebb)
                     case 1:// ha 1 az értéke akkor az első rádió értékét növeljük a másodpercekkel
-                        radio1 += min * 60 + sec;
+                        radio1 += second;
                         break;
                     case 2:// ha 2 az értéke akkor a második rádió értékét növeljük a másodpercekkel
-                        radio2 += min * 60 + sec;
+                        radio2 += second;
                         break;
                     default:// ha nem 1 vagy 2 akkor csak a harmadik marad, tehát azt növeljük a
                             // másodpercekkel
-                        radio3 += min * 60 + sec;
+                        radio3 += second;
                         break;
                 }
 
